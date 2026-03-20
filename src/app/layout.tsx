@@ -14,24 +14,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "Créer un Site avec GLM - Guide Complet pour Débutants",
+  description: "Apprenez à créer votre site web en 5 minutes avec GLM de z.ai, GitHub et Vercel. Guide étape par étape pour débutants sans connaissance technique.",
+  keywords: ["créer site web", "GLM", "z.ai", "GitHub", "Vercel", "guide débutant", "IA", "déployer site", "Next.js"],
+  authors: [{ name: "Minher0" }],
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "/icon.png",
+    apple: "/icon.png",
   },
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "Créer un Site avec GLM - Guide Complet",
+    description: "Apprenez à créer votre site web en 5 minutes avec GLM de z.ai, GitHub et Vercel.",
+    url: "https://explique-comment-faire-un-site.vercel.app",
+    siteName: "Créer un Site avec GLM",
     type: "website",
+    images: ["/icon.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "Créer un Site avec GLM - Guide Complet",
+    description: "Apprenez à créer votre site web en 5 minutes avec GLM de z.ai, GitHub et Vercel.",
+    images: ["/icon.png"],
   },
 };
 
@@ -41,7 +44,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="fr" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/icon.png" />
+        <link rel="apple-touch-icon" href="/icon.png" />
+        <meta name="theme-color" content="#0f172a" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
