@@ -71,8 +71,9 @@ export default function Home() {
         "Allez dans Settings → Developer settings → Personal access tokens → Tokens (classic)",
         "Cliquez sur 'Generate new token (classic)'",
         "Donnez un nom descriptif à votre token (ex: 'GLM Access')",
-        "Cochez les permissions : repo (full control), workflow",
-        "Copiez le token généré - il ne sera plus jamais affiché !"
+        "⚠️ IMPORTANT : Cochez la permission 'repo' (full control of private repositories) - c'est indispensable !",
+        "Copiez le token et enregistrez-le dans un endroit sûr (note, fichier sécurisé...)",
+        "Le token ne sera plus jamais affiché après avoir quitté la page !"
       ],
       tokenExample: "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     },
@@ -102,22 +103,24 @@ export default function Home() {
         "Allez dans Settings → Tokens",
         "Cliquez sur 'Create Token'",
         "Donnez un nom (ex: 'GLM Deploy') et une durée de vie",
-        "Copiez immédiatement le token - il ne sera plus visible !"
+        "Copiez immédiatement le token et enregistrez-le en lieu sûr",
+        "Le token ne sera plus jamais visible après fermeture de la page !"
       ],
       tokenExample: "vcp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     },
     {
       number: "05",
       title: "Faire un prompt à GLM de z.ai",
-      description: "C'est l'étape magique ! Vous allez demander à GLM de créer votre site en lui fournissant vos tokens. GLM va générer le code, le pousser sur GitHub et déployer sur Vercel automatiquement.",
+      description: "C'est l'étape magique ! Vous allez demander à GLM de créer votre site en lui fournissant vos tokens. GLM va générer le code, le pousser sur GitHub et déployer sur Vercel automatiquement. Après la création, vous pouvez continuer à lui donner des instructions pour modifier votre site !",
       icon: MessageSquare,
       link: "https://z.ai",
       linkText: "Accéder à GLM z.ai",
       details: [
         "Décrivez clairement le site que vous souhaitez",
-        "Fournissez votre token GitHub et Vercel",
+        "Fournissez votre token GitHub et Vercel dans le prompt",
         "Indiquez le nom du repository à créer",
-        "GLM s'occupe de tout le reste !"
+        "Une fois le site créé, gardez vos tokens pour les modifications futures",
+        "Vous pouvez continuer à donner des instructions à GLM pour améliorer votre site !"
       ]
     }
   ]
@@ -151,6 +154,10 @@ Voici le concept du site : [DÉCRIS TON SITE ICI - type, fonctionnalités, desig
 
   const tips = [
     {
+      title: "🔒 Enregistrer ses tokens",
+      content: "Gardez vos tokens GitHub et Vercel dans un endroit sûr (note secrète, gestionnaire de mots de passe, fichier sécurisé). Vous en aurez besoin pour chaque interaction avec GLM : création du site, modifications, mises à jour... Ne les perdez pas !"
+    },
+    {
       title: "Sécurité des tokens",
       content: "Vos tokens sont comme des clés d'accès. Ne les partagez qu'avec des IA de confiance comme GLM. Vous pouvez les révoquer à tout moment dans les paramètres de GitHub et Vercel si vous pensez qu'ils ont été compromis."
     },
@@ -159,8 +166,8 @@ Voici le concept du site : [DÉCRIS TON SITE ICI - type, fonctionnalités, desig
       content: "Plus votre description est précise, meilleur sera le résultat. Mentionnez le type de site (portfolio, blog, e-commerce...), les couleurs souhaitées, les fonctionnalités principales, et le style général (moderne, minimaliste, coloré...)."
     },
     {
-      title: "Modifier après déploiement",
-      content: "Une fois le site en ligne, vous pouvez demander à GLM de faire des modifications. Chaque changement sera automatiquement déployé sur Vercel grâce à l'intégration avec GitHub."
+      title: "🔄 Continuer après la création",
+      content: "Une fois votre site créé, vous pouvez continuer à donner des instructions à GLM pour le modifier : changer les couleurs, ajouter des fonctionnalités, corriger des bugs... Chaque modification sera automatiquement déployée sur Vercel. Gardez vos tokens accessibles !"
     },
     {
       title: "Nom de domaine personnalisé",
